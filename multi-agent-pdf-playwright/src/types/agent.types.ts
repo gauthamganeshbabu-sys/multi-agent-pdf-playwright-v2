@@ -26,6 +26,12 @@ export interface GraphState {
   attempt: number;
   maxAttempts: number;
   agentHistory: AgentMessage[];
+
+  // LangGraph additions
+  extractedText?: string;
+  messages?: any[];
+  logs?: string[];
+  errors?: string[];
 }
 
 export interface PatchRequest {

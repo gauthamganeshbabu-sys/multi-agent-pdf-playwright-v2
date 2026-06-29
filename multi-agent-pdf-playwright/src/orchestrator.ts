@@ -7,7 +7,7 @@
 
 import chalk from 'chalk';
 import * as path from 'path';
-import { runWorkflow } from './graph/workflow.graph';
+import { runWorkflow } from './graph/workflow.graph'; 
 
 export async function runOrchestrator(pdfPath: string, appUrl: string): Promise<void> {
   console.log(chalk.bold.blue('\n╔══════════════════════════════════════════════════╗'));

@@ -5,6 +5,10 @@
  */
 
 import chalk from 'chalk';
+
+import { StateGraph, START, END } from "@langchain/langgraph";
+import { WorkflowState } from "../types/workflow.state";
+
 import { AgentA } from '../agents/agentA.requirementExtractor';
 import { AgentB } from '../agents/agentB.codeGenerator';
 import { AgentC } from '../agents/agentC.auditor';
@@ -189,3 +193,19 @@ export async function runWorkflow(pdfPath: string, appUrl: string): Promise<Grap
 
   return state;
 }
+
+/*
+    // -----------------------------------------------------------------------------
+    // LangGraph Workflow (New)
+    // -----------------------------------------------------------------------------
+
+    export async function runLangGraphWorkflow(
+      pdfPath: string,
+      appUrl: string
+    ): Promise<GraphState> {
+
+      console.log(chalk.green("\n🚀 Starting LangGraph Workflow..."));
+
+      // Temporary: use existing workflow until LangGraph graph is connected
+      return await runWorkflow(pdfPath, appUrl);
+    }*/

@@ -1,0 +1,67 @@
+{
+  "sourcePdf": "./artifacts/requirements.pdf",
+  "appUrl": "https://www.saucedemo.com",
+  "extractedAt": "2026-06-29T11:29:10.090Z",
+  "requirements": [
+    {
+      "id": "REQ-001",
+      "title": "User should open the application login page.",
+      "description": "User should open the application login page.",
+      "preconditions": [],
+      "testSteps": [
+        "User should open the application login page."
+      ],
+      "expectedResult": "User should open the application login page.",
+      "priority": "Low",
+      "testType": "Positive"
+    },
+    {
+      "id": "REQ-002",
+      "title": "User should enter username.",
+      "description": "User should enter username.",
+      "preconditions": [],
+      "testSteps": [
+        "User should enter username."
+      ],
+      "expectedResult": "User should enter username.",
+      "priority": "Low",
+      "testType": "Positive"
+    },
+    {
+      "id": "REQ-003",
+      "title": "User should enter password.",
+      "description": "User should enter password.",
+      "preconditions": [],
+      "testSteps": [
+        "User should enter password."
+      ],
+      "expectedResult": "User should enter password.",
+      "priority": "Low",
+      "testType": "Positive"
+    },
+    {
+      "id": "REQ-004",
+      "title": "User should click login button.",
+      "description": "User should click login button.",
+      "preconditions": [],
+      "testSteps": [
+        "User should click login button."
+      ],
+      "expectedResult": "User should click login button.",
+      "priority": "Low",
+      "testType": "Positive"
+    },
+    {
+      "id": "REQ-005",
+      "title": "After successful login user should navigate to product page. Validation: Verify products page is displayed successfully.",
+      "description": "After successful login user should navigate to product page. Validation: Verify products page is displayed successfully.",
+      "preconditions": [],
+      "testSteps": [
+        "After successful login user should navigate to product page. Validation: Verify products page is displayed successfully."
+      ],
+      "expectedResult": "After successful login user should navigate to product page. Validation: Verify products page is displayed successfully.",
+      "priority": "Low",
+      "testType": "Positive"
+    }
+  ]
+}

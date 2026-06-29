@@ -1,0 +1,20 @@
+{
+  "status": "PASSED",
+  "attempt": 1,
+  "summary": "5 requirements passed, 0 issue(s) found.",
+  "coverage": {
+    "totalRequirements": 5,
+    "coveredRequirements": 5,
+    "missingRequirements": [],
+    "incorrectRequirements": []
+  },
+  "issues": [],
+  "requiresFix": false,
+  "playwrightRunResult": {
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "errors": []
+  },
+  "auditedAt": "2026-06-29T11:29:17.441Z"
+}

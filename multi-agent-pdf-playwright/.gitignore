@@ -1,0 +1,17 @@
+# Environment variables
+.env
+
+# Dependencies
+node_modules/
+
+# Playwright output
+playwright-report/
+
+# Generated reports
+reports/
+
+# Generated artifacts
+artifacts/
+
+# Generated tests
+tests/generated/

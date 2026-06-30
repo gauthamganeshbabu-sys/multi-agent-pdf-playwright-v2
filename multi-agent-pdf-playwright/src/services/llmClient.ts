@@ -19,17 +19,30 @@ export interface LLMResponse {
 export class LLMClient {
   private apiKey: string | undefined;
   private model: string;
+  private client: any = null;
+  private mockMode = false;
 
   constructor() {
-    this.apiKey = process.env.OPENAI_API_KEY;
-    this.model = process.env.LLM_MODEL || 'gpt-4o';
+  this.apiKey = process.env.OPENAI_API_KEY;
+  this.model = process.env.LLM_MODEL || "gpt-4o";
 
-    if (!this.apiKey || this.apiKey === 'your_openai_api_key_here') {
-      console.warn(chalk.yellow('[LLMClient] No valid OPENAI_API_KEY found. Mock responses will be used.'));
-    } else {
-      console.log(chalk.green(`[LLMClient] Initialized with model: ${this.model}`));
-    }
+  if (!this.apiKey || this.apiKey === "your_openai_api_key_here") {
+
+    this.mockMode = true;
+
+    console.warn(
+      chalk.yellow(
+        "\n⚠ OpenAI API key not found. Switching to Mock Response Mode.\n"
+      )
+    );
+
+    return;
   }
+
+  console.log(
+    chalk.green(`[LLMClient] Initialized with model: ${this.model}`)
+  );
+}
 
   hasApiKey(): boolean {
     return !!this.apiKey && this.apiKey !== 'your_openai_api_key_here';
@@ -40,7 +53,7 @@ export class LLMClient {
    * Uses real OpenAI API if key is available; otherwise returns mock.
    */
   async chat(messages: LLMMessage[], mockFallback: string): Promise<LLMResponse> {
-    if (!this.apiKey || this.apiKey === 'your_openai_api_key_here') {
+    if (this.mockMode) { return {text: mockFallback, usedMock: true}; } {
       return { text: mockFallback, usedMock: true };
     }
 
@@ -58,9 +71,28 @@ export class LLMClient {
 
       const text = response.choices[0]?.message?.content || '';
       return { text, usedMock: false };
-    } catch (err) {
-      console.error(chalk.red(`[LLMClient] API call failed: ${(err as Error).message}. Using mock fallback.`));
-      return { text: mockFallback, usedMock: true };
-    }
+    } 
+    catch (err) {
+
+  if (!this.mockMode) {
+
+    this.mockMode = true;
+
+    const message = (err as Error).message;
+
+    console.warn(
+      chalk.yellow(
+        `\n⚠ LLM unavailable (${message}).\nSwitching to Mock Response Mode for the remaining execution.\n`
+      )
+    );
+
+  }
+
+  return {
+    text: mockFallback,
+    usedMock: true
+  };
+
+}
   }
 }

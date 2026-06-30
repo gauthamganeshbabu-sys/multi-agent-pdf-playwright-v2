@@ -111,12 +111,25 @@ Return ONLY valid JSON. No markdown. No extra text. Format:
   }
 
   private splitIntoRequirementSections(text: string): string[] {
-
     const sectionHeaders = [
       ...text.matchAll(/^(REQ[-\s]?\d+|Requirement\s+\d+)\b.*$/gim)
     ];
 
     if (!sectionHeaders.length) {
+      const paragraphs = text
+        .split(/\n\s*\n|\r\n\s*\r\n/)
+        .map((p) => p.trim())
+        .filter(Boolean);
+
+      if (paragraphs.length > 1) {
+        return paragraphs;
+      }
+
+      const lines = text.split(/\n+/).map((l) => l.trim()).filter(Boolean);
+      if (lines.length > 1) {
+        return lines;
+      }
+
       return [text];
     }
 
@@ -129,7 +142,7 @@ Return ONLY valid JSON. No markdown. No extra text. Format:
     }
 
     return sections;
-}
+  }
 
   private parseRequirementSection(section: string, fallbackIndex: number): Requirement | null {
     const lines = section

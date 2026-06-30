@@ -119,26 +119,21 @@ private async tryLogin(page:any){
       ).first();
 
 
-    if(
+    if (
       await username.count() &&
-      await password.count()
-    ){
+      await password.count() &&
+      process.env.TEST_USERNAME &&
+      process.env.TEST_PASSWORD
+    ) {
 
-      await username.fill(
-        process.env.TEST_USERNAME || 'standard_user'
-      );
-
-      await password.fill(
-        process.env.TEST_PASSWORD || 'secret_sauce'
-      );
-
+      await username.fill(process.env.TEST_USERNAME);
+      await password.fill(process.env.TEST_PASSWORD);
 
       await page.locator(
         'button,input[type=submit]'
       )
       .first()
       .click();
-
 
       await page.waitForLoadState(
         'domcontentloaded'

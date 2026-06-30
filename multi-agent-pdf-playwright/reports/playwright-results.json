@@ -1,0 +1,479 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/share/nvm/versions/node/v24.14.0/bin/node",
+      "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/node_modules/.bin/playwright",
+      "test",
+      "tests/generated"
+    ],
+    "configFile": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/playwright.config.ts",
+    "rootDir": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "reports/playwright-html"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/playwright-results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.61.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "REQ-001.spec.ts",
+      "file": "REQ-001.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "REQ-001 - User Login With Valid Credentials",
+          "file": "REQ-001.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User Login With Valid Credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1011,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-30T12:23:00.003Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b7fe95be4fdcb1ff7322-057709d15541309d6d65",
+              "file": "REQ-001.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "REQ-002.spec.ts",
+      "file": "REQ-002.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "REQ-002 - Add Product To Cart",
+          "file": "REQ-002.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Add Product To Cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12572,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Sauce Labs Backpack\"').first()\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Sauce Labs Backpack\"').first()\u001b[22m\n\n    at /workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-002.spec.ts:41:8",
+                        "location": {
+                          "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-002.spec.ts",
+                          "column": 8,
+                          "line": 41
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"text=\\\"Sauce Labs Backpack\\\"\"\u001b[39m)\n \u001b[90m 40 |\u001b[39m       \u001b[33m.\u001b[39mfirst()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m       \u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button#add-to-cart, button[id^=\\\"add-to-cart\\\"], button:has-text('Add to cart')\"\u001b[39m)\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-002.spec.ts",
+                            "column": 8,
+                            "line": 41
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('text=\"Sauce Labs Backpack\"').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"text=\\\"Sauce Labs Backpack\\\"\"\u001b[39m)\n \u001b[90m 40 |\u001b[39m       \u001b[33m.\u001b[39mfirst()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m       \u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button#add-to-cart, button[id^=\\\"add-to-cart\\\"], button:has-text('Add to cart')\"\u001b[39m)\u001b[0m\n\u001b[2m    at /workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-002.spec.ts:41:8\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-30T12:23:01.334Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results/REQ-002-REQ-002---Add-Product-To-Cart-Add-Product-To-Cart-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results/REQ-002-REQ-002---Add-Product-To-Cart-Add-Product-To-Cart-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-002.spec.ts",
+                        "column": 8,
+                        "line": 41
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ec9f822a39187ab8075f-29e29718bc4b456fad2b",
+              "file": "REQ-002.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "REQ-003.spec.ts",
+      "file": "REQ-003.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "REQ-003 - Remove Product From Cart",
+          "file": "REQ-003.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Remove Product From Cart",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12046,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button#add-to-cart, button[id^=\"add-to-cart\"], button:has-text(\\'Add to cart\\')').first()\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button#add-to-cart, button[id^=\"add-to-cart\"], button:has-text(\\'Add to cart\\')').first()\u001b[22m\n\n    at /workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-003.spec.ts:41:8",
+                        "location": {
+                          "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-003.spec.ts",
+                          "column": 8,
+                          "line": 41
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button#add-to-cart, button[id^=\\\"add-to-cart\\\"], button:has-text('Add to cart')\"\u001b[39m)\n \u001b[90m 40 |\u001b[39m       \u001b[33m.\u001b[39mfirst()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m       \u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link\"\u001b[39m)\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-003.spec.ts",
+                            "column": 8,
+                            "line": 41
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button#add-to-cart, button[id^=\"add-to-cart\"], button:has-text(\\'Add to cart\\')').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button#add-to-cart, button[id^=\\\"add-to-cart\\\"], button:has-text('Add to cart')\"\u001b[39m)\n \u001b[90m 40 |\u001b[39m       \u001b[33m.\u001b[39mfirst()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m       \u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link\"\u001b[39m)\u001b[0m\n\u001b[2m    at /workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-003.spec.ts:41:8\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-30T12:23:16.673Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results/REQ-003-REQ-003---Remove-P-973c1-rt-Remove-Product-From-Cart-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results/REQ-003-REQ-003---Remove-P-973c1-rt-Remove-Product-From-Cart-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-003.spec.ts",
+                        "column": 8,
+                        "line": 41
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "03a47ffe434fa17b47b4-a8fd667126310d543be4",
+              "file": "REQ-003.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "REQ-004.spec.ts",
+      "file": "REQ-004.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "REQ-004 - Checkout Customer Details",
+          "file": "REQ-004.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Checkout Customer Details",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 11563,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button#add-to-cart, button[id^=\"add-to-cart\"], button:has-text(\\'Add to cart\\')').first()\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button#add-to-cart, button[id^=\"add-to-cart\"], button:has-text(\\'Add to cart\\')').first()\u001b[22m\n\n    at /workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-004.spec.ts:41:8",
+                        "location": {
+                          "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-004.spec.ts",
+                          "column": 8,
+                          "line": 41
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button#add-to-cart, button[id^=\\\"add-to-cart\\\"], button:has-text('Add to cart')\"\u001b[39m)\n \u001b[90m 40 |\u001b[39m       \u001b[33m.\u001b[39mfirst()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m       \u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link\"\u001b[39m)\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-004.spec.ts",
+                            "column": 8,
+                            "line": 41
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button#add-to-cart, button[id^=\"add-to-cart\"], button:has-text(\\'Add to cart\\')').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button#add-to-cart, button[id^=\\\"add-to-cart\\\"], button:has-text('Add to cart')\"\u001b[39m)\n \u001b[90m 40 |\u001b[39m       \u001b[33m.\u001b[39mfirst()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m       \u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m\n \u001b[90m 44 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link\"\u001b[39m)\u001b[0m\n\u001b[2m    at /workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-004.spec.ts:41:8\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-30T12:23:33.755Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results/REQ-004-REQ-004---Checkout-0d4f4-s-Checkout-Customer-Details-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results/REQ-004-REQ-004---Checkout-0d4f4-s-Checkout-Customer-Details-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-004.spec.ts",
+                        "column": 8,
+                        "line": 41
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "c7bb5aab53de6b387e50-893959ad731b850c654c",
+              "file": "REQ-004.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "REQ-005.spec.ts",
+      "file": "REQ-005.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "REQ-005 - Complete Order",
+          "file": "REQ-005.spec.ts",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Complete Order",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 14603,
+                      "error": {
+                        "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link').first()\u001b[22m\n",
+                        "stack": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link').first()\u001b[22m\n\n    at /workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-005.spec.ts:41:8",
+                        "location": {
+                          "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-005.spec.ts",
+                          "column": 8,
+                          "line": 41
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link\"\u001b[39m)\n \u001b[90m 40 |\u001b[39m       \u001b[33m.\u001b[39mfirst()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m       \u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'domcontentloaded'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-005.spec.ts",
+                            "column": 8,
+                            "line": 41
+                          },
+                          "message": "TimeoutError: locator.click: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link').first()\u001b[22m\n\n\n\u001b[0m \u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"#shopping_cart_container, a.shopping_cart_link, .shopping_cart_link\"\u001b[39m)\n \u001b[90m 40 |\u001b[39m       \u001b[33m.\u001b[39mfirst()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 41 |\u001b[39m       \u001b[33m.\u001b[39mclick({ timeout\u001b[33m:\u001b[39m \u001b[35m10000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 42 |\u001b[39m\n \u001b[90m 43 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'domcontentloaded'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m\u001b[0m\n\u001b[2m    at /workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-005.spec.ts:41:8\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-06-30T12:23:46.201Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results/REQ-005-REQ-005---Complete-Order-Complete-Order-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/reports/test-results/REQ-005-REQ-005---Complete-Order-Complete-Order-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/workspaces/multi-agent-pdf-playwright-v2/multi-agent-pdf-playwright/tests/generated/REQ-005.spec.ts",
+                        "column": 8,
+                        "line": 41
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "30b4d31934aa87cc0aaa-27785b96f8cb45f92cf9",
+              "file": "REQ-005.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-06-30T12:22:58.521Z",
+    "duration": 63121.172,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

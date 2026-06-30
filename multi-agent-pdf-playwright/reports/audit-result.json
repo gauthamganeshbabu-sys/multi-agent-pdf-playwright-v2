@@ -11,10 +11,12 @@
   "issues": [],
   "requiresFix": false,
   "playwrightRunResult": {
-    "passed": 5,
+    "passed": 0,
     "failed": 0,
     "skipped": 0,
-    "errors": []
+    "errors": [
+      "spawnSync /bin/sh ETIMEDOUT"
+    ]
   },
-  "auditedAt": "2026-06-29T11:29:17.441Z"
+  "auditedAt": "2026-06-30T12:22:49.844Z"
 }

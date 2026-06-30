@@ -1,66 +1,88 @@
 {
-  "sourcePdf": "./artifacts/requirements.pdf",
+  "sourcePdf": "./artifacts/ecommerce.pdf",
   "appUrl": "https://www.saucedemo.com",
-  "extractedAt": "2026-06-29T11:29:10.090Z",
+  "extractedAt": "2026-06-30T12:21:47.778Z",
   "requirements": [
     {
       "id": "REQ-001",
-      "title": "User should open the application login page.",
-      "description": "User should open the application login page.",
-      "preconditions": [],
-      "testSteps": [
-        "User should open the application login page."
+      "title": "User Login With Valid Credentials",
+      "description": "User Login With Valid Credentials",
+      "preconditions": [
+        "User should have a valid SauceDemo account."
       ],
-      "expectedResult": "User should open the application login page.",
-      "priority": "Low",
+      "testSteps": [
+        "Open SauceDemo login page",
+        "Enter username standard_user",
+        "Enter password secret_sauce",
+        "Click Login button"
+      ],
+      "expectedResult": "User should successfully login and product inventory page should display.",
+      "priority": "High",
       "testType": "Positive"
     },
     {
       "id": "REQ-002",
-      "title": "User should enter username.",
-      "description": "User should enter username.",
-      "preconditions": [],
-      "testSteps": [
-        "User should enter username."
+      "title": "Add Product To Cart",
+      "description": "Add Product To Cart",
+      "preconditions": [
+        "User is already logged into application."
       ],
-      "expectedResult": "User should enter username.",
-      "priority": "Low",
+      "testSteps": [
+        "Login with valid credentials",
+        "Select Sauce Labs Backpack product",
+        "Click Add To Cart button",
+        "Open shopping cart"
+      ],
+      "expectedResult": "Selected product should be available inside cart.",
+      "priority": "High",
       "testType": "Positive"
     },
     {
       "id": "REQ-003",
-      "title": "User should enter password.",
-      "description": "User should enter password.",
-      "preconditions": [],
-      "testSteps": [
-        "User should enter password."
+      "title": "Remove Product From Cart",
+      "description": "Remove Product From Cart",
+      "preconditions": [
+        "Product already added into shopping cart."
       ],
-      "expectedResult": "User should enter password.",
-      "priority": "Low",
+      "testSteps": [
+        "Open shopping cart page",
+        "Click Remove button for product"
+      ],
+      "expectedResult": "Product should be removed from cart successfully.",
+      "priority": "Medium",
       "testType": "Positive"
     },
     {
       "id": "REQ-004",
-      "title": "User should click login button.",
-      "description": "User should click login button.",
-      "preconditions": [],
-      "testSteps": [
-        "User should click login button."
+      "title": "Checkout Customer Details",
+      "description": "Checkout Customer Details",
+      "preconditions": [
+        "User has product in cart."
       ],
-      "expectedResult": "User should click login button.",
-      "priority": "Low",
+      "testSteps": [
+        "Click checkout button",
+        "Enter first name",
+        "Enter last name",
+        "Enter postal code",
+        "Click continue"
+      ],
+      "expectedResult": "Checkout overview page should display.",
+      "priority": "High",
       "testType": "Positive"
     },
     {
       "id": "REQ-005",
-      "title": "After successful login user should navigate to product page. Validation: Verify products page is displayed successfully.",
-      "description": "After successful login user should navigate to product page. Validation: Verify products page is displayed successfully.",
-      "preconditions": [],
-      "testSteps": [
-        "After successful login user should navigate to product page. Validation: Verify products page is displayed successfully."
+      "title": "Complete Order",
+      "description": "Complete Order",
+      "preconditions": [
+        "Checkout information completed."
       ],
-      "expectedResult": "After successful login user should navigate to product page. Validation: Verify products page is displayed successfully.",
-      "priority": "Low",
+      "testSteps": [
+        "Review order details",
+        "Click Finish button"
+      ],
+      "expectedResult": "Order confirmation message should display.",
+      "priority": "High",
       "testType": "Positive"
     }
   ]

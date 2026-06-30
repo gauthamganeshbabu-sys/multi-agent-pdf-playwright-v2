@@ -1,5 +1,56 @@
 {
   "scannedUrl": "https://www.saucedemo.com",
-  "scannedAt": "2026-06-29T11:29:10.290Z",
-  "elements": []
+  "scannedAt": "2026-06-30T12:21:49.675Z",
+  "elements": [
+    {
+      "tag": "input",
+      "role": "input",
+      "text": null,
+      "label": "user-name",
+      "placeholder": "Username",
+      "testId": null,
+      "cssSelector": "#user-name",
+      "suggestedLocator": "page.locator('#user-name')"
+    },
+    {
+      "tag": "input",
+      "role": "input",
+      "text": null,
+      "label": "password",
+      "placeholder": "Password",
+      "testId": null,
+      "cssSelector": "#password",
+      "suggestedLocator": "page.locator('#password')"
+    },
+    {
+      "tag": "input",
+      "role": "input",
+      "text": "Login",
+      "label": "login-button",
+      "placeholder": null,
+      "testId": null,
+      "cssSelector": "#login-button",
+      "suggestedLocator": "page.locator('#login-button')"
+    },
+    {
+      "tag": "svg",
+      "role": "img",
+      "text": null,
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "cssSelector": null,
+      "suggestedLocator": "page.locator('svg')"
+    },
+    {
+      "tag": "button",
+      "role": "button",
+      "text": null,
+      "label": null,
+      "placeholder": null,
+      "testId": null,
+      "cssSelector": null,
+      "suggestedLocator": "page.locator('button')"
+    }
+  ]
 }
